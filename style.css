@@ -1,0 +1,186 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.typing {
+    display: inline-block;
+    color: #87ceeb;
+    font-size: 2rem;
+    text-shadow: 0 0 6px #87ceeb, 0 0 20px #87ceeb;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #87ceeb;
+    width: 0;
+    animation: typing 3s steps(20, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 17ch }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+header p {
+    color: #a8a8a8;
+    font-size: 0.95rem;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+section {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #111;
+    border: 1px solid #87ceeb40;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px #87ceeb10;
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    border-color: #87ceeb;
+    box-shadow: 0 0 15px #87ceeb30, 0 0 25px #87ceeb20;
+    transform: translateY(-3px);
+}
+
+section h2 {
+    color: #87ceeb;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #87ceeb40;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    text-shadow: 0 0 6px #87ceeb;
+}
+
+section p {
+    color: #cfcfcf;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.carousel-container {
+    width: 100%;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 10px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 85%;
+    max-width: 260px;
+    background-color: #151515;
+    border: 1px solid #87ceeb40; /* Biru Langit */
+    border-radius: 10px;
+    padding: 16px;
+    scroll-snap-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #87ceeb;
+    box-shadow: 0 0 10px #87ceeb55;
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    color: #87ceeb;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #b0b0b0;
+    font-size: 0.85rem;
+}
+
+.card h3 a {
+    color: #87ceeb;
+    text-decoration: none;
+    text-shadow: 0 0 6px #87ceeb;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.card h3 a:hover {
+    color: #ADD8E6;
+    text-shadow: 0 0 10px #ADD8E6, 0 0 20px #ADD8E6;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 12px;
+}
+
+.nav-buttons button {
+    background: transparent;
+    color: #87ceeb;
+    border: 1px solid #87ceeb;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-family: monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #87ceeb;
+    color: #0f0f0f;
+    box-shadow: 0 0 10px #87ceeb60;
+}
+
+section a {
+    color: #87ceeb;
+    text-decoration: none;
+    text-shadow: 0 0 6px #87ceeb;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+section a:hover {
+    color: #ADD8E6;
+    text-shadow: 0 0 10px #ADD8E6, 0 0 20px #ADD8E6;
+}
+
+@media (max-width: 600px) {
+    .typing {
+        font-size: 1.6rem;
+    }
+    section {
+        padding: 16px;
+    }
+    .card {
+        width: 90%;
+    }
+}
